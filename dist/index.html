@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>training</title>
+    <link rel="stylesheet" href="clock.css">
+<script defer src="bundle.js"></script></head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="home-menu">
+                <img src="assets/menu.png" width="35px" alt="menu" id="menuImg">
+                <img src="assets/home.png" title="Demo page" width="35px" alt="home" id="home-tab-img">
+            </div>
+            <h1>ToDo App</h1>
+        </header>
+        <nav class="nav">
+            <ul id="menu">
+                <li id="all-todos" class="bg fc">All Todos<span class="nu one">0</span></li>
+                <li id="today" class="bg fc">For Today<span class="nu two">0</span></li>
+                <li id="in-week" class="bg fc">In a Week<span class="nu three">0</span></li>
+                <li id="notes" class="bg fc">Notes<span class="nu four">0</span></li>
+                <div id="proj">
+                    <div id="name">
+                        <div>Projects</div>
+                        <span title="Create New Project" id="add">➕</span>
+                    </div>
+                    <div id="proj-menu">
+
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <main class="main">
+            <div class="home" style="width: 100%; height: 100%;" >
+                <img id="demo" width="100%" height="100%" alt="todo">
+            </div>
+
+        </main>
+        <footer class="footer">
+            <span>Developer: Zekaryas M.</span>
+        </footer>
+    </div>
+
+    <dialog class="new-project-dialog">
+        <div>
+            <h2>Name Your Project</h2>
+            <input type="text" id="proj-name">
+        </div>
+        <button id="create">Close</button>
+    </dialog>
+
+    <dialog class="task-info-pop">
+        <div id="task-name">
+            <h2>Task Name</h2>
+            <input type="text" name="task" maxlength="10" class="fields" id="task" equired>
+        </div>
+        <div id="due-date">
+            <h2>Due Date</h2>
+            <input type="date" name="date" class="fields" id="date"  required>
+        </div>
+        <div id="des">
+            <h2>Discription</h2>
+            <input type="text" name="description" class="fields" id="description" required>
+        </div>
+        <div id="priorty">
+            <h2>Priority</h2>
+            <select id="priority" style="background: rgba(0, 208, 255);width:100%" required>
+                <option style="background: rgb(255, 0, 0, .4);" value="Low">Low</option>
+                <option style="background: rgb(255, 255, 0, .4);" value="Medium">Medium</option>
+                <option style="background: rgb(0, 255, 0, .4);" value="High">High</option>
+            </select>
+        </div>
+        <button id="add-task">Close</button>
+    </dialog>
+
+    <dialog class="notes-dialog">
+        <input type="text" name="text" class="note-fields" id="title" placeholder="Title">
+        <textarea name="discription" class="note-fields" id="note-desc" cols="20" rows="15" placeholder="Description..."></textarea>
+        <button id="add-note">Close</button>
+    </dialog>
+
+    <dialog style="width:200px" class="expand">
+        <h1 style="color: green;">Details</h1>
+        <div><h2>Todo</h2><span class="todo-task"></span></div>
+        <div><h2>Due Date</h2> <span class="dates"></span></div>
+        <div><h2>Description</h2><span class="descr"></span></div>
+        <div><h2>Priority</h2><span class="prio"></span></div>
+        <button id="close-exp">Close</button>
+    </dialog>
+</body>
+</html>
